@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@theme {
+  --color-glass: rgba(255, 255, 255, 0.1);
+  --color-glassBorder: rgba(255, 255, 255, 0.2);
+}
+
+@layer base {
+  body {
+    @apply bg-emerald-950 text-white min-h-screen overflow-x-hidden;
+    /* Deep Emerald/Forest Green to lighter Green gradient */
+    background: linear-gradient(135deg, #022c22 0%, #064e3b 50%, #065f46 100%);
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl shadow-xl;
+  }
+
+  .glass-input {
+    @apply bg-white/5 border border-white/10 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-500/50 text-white placeholder-emerald-100/50;
+  }
+
+  .glass-button {
+    @apply bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white font-semibold py-2 px-4 rounded-lg transition-all duration-300 shadow-lg hover:shadow-emerald-500/25;
+  }
+}
